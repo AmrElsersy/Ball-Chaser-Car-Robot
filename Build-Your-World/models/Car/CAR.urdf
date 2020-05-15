@@ -1,0 +1,100 @@
+<?xml version="1.0" ?>
+<robot name="Car">
+  <joint name="Car__link_0_JOINT_0" type="revolute">
+    <parent link="Car__link_0"/>
+    <child link="Car__link_1_clone"/>
+    <origin rpy="1.5707  0      0" xyz="-0.24     0.31126  0.04296"/>
+    <axis xyz="0  0  1"/>
+    <limit effort="-1.0" lower="-1.79769e+308" upper="1.79769e+308" velocity="-1.0"/>
+  </joint>
+  <joint name="Car__link_0_JOINT_1" type="revolute">
+    <parent link="Car__link_0"/>
+    <child link="Car__link_1"/>
+    <origin rpy="1.5707  0      0" xyz="-0.24    -0.28876  0.04295"/>
+    <axis xyz="0  0  1"/>
+    <limit effort="-1.0" lower="-1.79769e+308" upper="1.79769e+308" velocity="-1.0"/>
+  </joint>
+  <joint name="Car__link_0_JOINT_2" type="ball">
+    <parent link="Car__link_0"/>
+    <child link="Car__link_2"/>
+    <origin rpy="0  0  0" xyz="0.42     0.01125 -0.10887"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <link name="Car__link_0">
+    <inertial>
+      <mass value="1"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="Car__collision">
+      <origin rpy="0  0  0" xyz="0.06     0.01125  0.02296"/>
+      <geometry>
+        <box size="1 0.5 0.2"/>
+      </geometry>
+    </collision>
+    <visual name="Car__visual">
+      <origin rpy="0  0  0" xyz="0.06     0.01125  0.02296"/>
+      <geometry>
+        <box size="1 0.5 0.2"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="Car__link_1">
+    <inertial>
+      <mass value="1"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.145833" ixy="0" ixz="0" iyy="0.145833" iyz="0" izz="0.125"/>
+    </inertial>
+    <collision name="Car__collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.1" radius="0.2"/>
+      </geometry>
+    </collision>
+    <visual name="Car__visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.1" radius="0.2"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="Car__link_1_clone">
+    <inertial>
+      <mass value="1"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.145833" ixy="0" ixz="0" iyy="0.145833" iyz="0" izz="0.125"/>
+    </inertial>
+    <collision name="Car__collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.1" radius="0.2"/>
+      </geometry>
+    </collision>
+    <visual name="Car__visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.1" radius="0.2"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="Car__link_2">
+    <inertial>
+      <mass value="0.0345164"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.00036594" ixy="0" ixz="0" iyy="0.00036594" iyz="0" izz="0.00036594"/>
+    </inertial>
+    <collision name="Car__collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <sphere radius="0.05"/>
+      </geometry>
+    </collision>
+    <visual name="Car__visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <sphere radius="0.0500001"/>
+      </geometry>
+    </visual>
+  </link>
+</robot>
