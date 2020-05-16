@@ -1,0 +1,8 @@
+prefix=/home/amrelsersy/catkin_ws/src/ball_chaser/cmake-build-debug/devel
+
+Name: ball_chaser
+Description: Description of ball_chaser
+Version: 0.0.0
+Cflags: -I/home/amrelsersy/catkin_ws/src/ball_chaser/cmake-build-debug/devel/include
+Libs: -L${prefix}/lib 
+Requires: 
